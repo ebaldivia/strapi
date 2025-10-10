@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Artigos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "resume": {
+      "type": "text"
+    },
+    "is_highlight": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Notícias do Mercado",
+      "enum": [
+        "Novidades Internas",
+        "Notícias do Mercado"
+      ]
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
