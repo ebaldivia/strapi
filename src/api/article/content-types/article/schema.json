@@ -18,10 +18,20 @@
     "resume": {
       "type": "text"
     },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article-category.article-category"
+    },
     "is_highlight": {
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "is_public": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     },
     "cover": {
       "type": "media",
@@ -31,17 +41,14 @@
         "files"
       ]
     },
-    "category": {
-      "type": "enumeration",
-      "required": true,
-      "default": "Notícias do Mercado",
-      "enum": [
-        "Novidades Internas",
-        "Notícias do Mercado"
-      ]
-    },
     "content": {
       "type": "richtext"
+    },
+    "votes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article-vote.article-vote",
+      "mappedBy": "article"
     }
   }
 }

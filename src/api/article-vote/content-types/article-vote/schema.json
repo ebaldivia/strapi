@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_votes",
+  "info": {
+    "singularName": "article-vote",
+    "pluralName": "article-votes",
+    "displayName": "Votos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "like",
+        "dislike"
+      ]
+    },
+    "reference_id": {
+      "type": "string",
+      "unique": false
+    },
+    "reference_type": {
+      "type": "string"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article",
+      "inversedBy": "votes"
+    }
+  }
+}
