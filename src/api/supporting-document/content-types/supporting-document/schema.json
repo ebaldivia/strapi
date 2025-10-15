@@ -18,6 +18,11 @@
     "description": {
       "type": "text"
     },
+    "is_public": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
     "document_file": {
       "type": "media",
       "multiple": false,

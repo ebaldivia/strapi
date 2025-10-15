@@ -13,10 +13,12 @@
   "attributes": {
     "title": {
       "type": "string",
+      "maxLength": 90,
       "required": true
     },
     "resume": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 150
     },
     "category": {
       "type": "relation",
