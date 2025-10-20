@@ -15,16 +15,16 @@
       "type": "string",
       "required": true
     },
-    "is_active": {
-      "type": "boolean",
-      "required": true,
-      "default": true
-    },
     "color": {
       "type": "customField",
       "customField": "plugin::color-picker.color",
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "required": true
+    },
+    "is_active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   }
 }
